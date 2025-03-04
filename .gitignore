@@ -1,0 +1,80 @@
+# IntelliJ IDEA specific
+.idea/
+.idea/**/*
+!.idea/README.md
+!.idea/*.iml
+!.idea/vcs.xml
+!.idea/modules.xml
+
+# Ignorar workspace.xml e outros arquivos de configuração local
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/usage.statistics.xml
+.idea/dictionaries
+.idea/shelf/
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Gradle
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Logs
+*.log
+
+# Diretórios de build de IDEs
+out/
+
+# Arquivos de cache locais
+*.class
+*.war
+*.ear
+
+# Arquivos específicos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de configuração pessoais (caso alguém crie sem querer)
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Caches e arquivos locais de execução
+*.lock
+*.pid
+
+# Test coverage reports
+coverage/
+
+# Arquivos gerados por IDEs
+*.iml
+*.ipr
+*.iws
+
+# Configurações do Run/Debug do IntelliJ (opcional, se quiser salvar pode tirar)
+.idea/runConfigurations/
+
+# Arquivos de build específicos
+*.jar
+*.war
+*.ear
+
+# Ignorar arquivos temporários criados por editores
+*.~*
+*.orig
+*.rej
+
+# Optional: Ignore arquivos específicos do seu projeto
+.env
+.env.local
+.env.*.local
+/secrets
+/secrets/
