@@ -86,13 +86,6 @@ mvn clean install
 
 ---
 
-## 🏃‍♂️ Próximos Passos
-- Criar cenários reais simulando sistemas completos usando padrões combinados.
-- Escrever documentação com explicação de cada padrão.
-- Incluir diagramas UML para cada padrão.
-
----
-
 ## 📅 Curso Base
 Curso: [Padrões de Projeto em Java - Cod3r](https://www.cod3r.com.br/)  
 ---
