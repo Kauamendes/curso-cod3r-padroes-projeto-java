@@ -1,24 +1,22 @@
-package br.com.cod3r.singleton.connectionPool.conn;
+package br.com.cod3r.singleton.connectionPool.monostate.conn;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ConnectionPool {
 
-	private static final ConnectionPool singleton = new ConnectionPool();
-	private final List<Connection> connectionsPool;
-	private final Integer POOL_SIZE = 2;
+	private static final int POOL_SIZE = 2;
+	private static final List<Connection> connectionsPool = new ArrayList<>();
 
-    public static ConnectionPool getInstance() {
-       return singleton;
-    }
-
-	private ConnectionPool() {
+	static {
 		System.out.println("Creating Connection Pool");
-		connectionsPool = new ArrayList<>();
 		for (int i = 0; i < POOL_SIZE; i++) {
 			connectionsPool.add(new Connection());
 		}
+	}
+
+	public ConnectionPool() {
+		System.out.println("New instance of Connection Pool");
 	}
 
 	public Connection getConnection() {

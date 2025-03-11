@@ -1,28 +1,28 @@
-package br.com.cod3r.singleton.connectionPool;
+package br.com.cod3r.singleton.connectionPool.monostate;
 
-import br.com.cod3r.singleton.connectionPool.conn.Connection;
-import br.com.cod3r.singleton.connectionPool.conn.ConnectionPool;
+import br.com.cod3r.singleton.connectionPool.monostate.conn.Connection;
+import br.com.cod3r.singleton.connectionPool.monostate.conn.ConnectionPool;
 
 import java.util.Objects;
 
 public class Client {
 
 	public static void doQuery1() {
-		ConnectionPool pool = ConnectionPool.getInstance();
+		ConnectionPool pool = new ConnectionPool();
 		Connection connection = pool.getConnection();
 		if (Objects.nonNull(connection))
 			connection.query("SELECT * FROM A1");
 	}
 	
 	public static void doQuery2() {
-		ConnectionPool pool = ConnectionPool.getInstance();
+		ConnectionPool pool = new ConnectionPool();
 		Connection connection = pool.getConnection();
 		if (Objects.nonNull(connection))
 			connection.query("SELECT * FROM A2");
 	}
 	
 	public static void doQuery3() {
-		ConnectionPool pool = ConnectionPool.getInstance();
+		ConnectionPool pool = new ConnectionPool();
 		Connection connection = pool.getConnection();
 		if (Objects.nonNull(connection))
 			connection.query("SELECT * FROM A3");
