@@ -11,9 +11,7 @@ public abstract class IPhoneFactory {
 	}
 
 	public IPhone orderIPhone(String level) {
-		IPhone device = null;
-		
-		device = createIPhone(level);
+		IPhone device = createIPhone(level);
 		
 		device.getHardware();
 		device.assemble();
