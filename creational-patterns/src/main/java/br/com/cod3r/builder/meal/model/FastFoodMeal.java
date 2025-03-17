@@ -7,7 +7,7 @@ public class FastFoodMeal {
 	private String side;
 	private String dessert;
 	private String gift;
-	
+
 	public String getDrink() {
 		return drink;
 	}
