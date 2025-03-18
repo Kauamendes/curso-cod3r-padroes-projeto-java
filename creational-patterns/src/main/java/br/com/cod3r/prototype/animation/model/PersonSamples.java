@@ -4,13 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PersonSamples {
-	private Map<String, Person> samples;
+	private final Map<String, Person> samples;
 	
 	public PersonSamples() {
 		samples = new HashMap<>();
 		loadSamples();
 	}
-	
+
 	public Person get(String type) {
 		return samples.get(type);
 	}
