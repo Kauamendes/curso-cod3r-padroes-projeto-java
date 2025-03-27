@@ -13,6 +13,11 @@
 .idea/dictionaries
 .idea/shelf/
 
+# Eclipse specific
+.classpath
+.project
+.settings/
+
 # Maven
 target/
 pom.xml.tag
