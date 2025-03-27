@@ -2,6 +2,8 @@ package br.com.cod3r.adapter.tvPort.devices;
 
 import br.com.cod3r.adapter.tvPort.intefaces.HDMI;
 
+import static java.util.Objects.isNull;
+
 public class Computer {
 	private HDMI port;
 	
@@ -11,9 +13,9 @@ public class Computer {
 	}
 	
 	public void sendImageAndSound(String image, String sound) {
-		if(port == null) {
+		if (isNull(port)) {
 			System.out.println("Connect a HDMI cable first");
-		} else {
+        } else {
 			port.setImage(image);
 			port.setSound(sound);
 		}
