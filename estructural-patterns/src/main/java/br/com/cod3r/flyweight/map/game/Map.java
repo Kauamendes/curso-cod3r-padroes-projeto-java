@@ -1,11 +1,12 @@
 package br.com.cod3r.flyweight.map.game;
 
+import br.com.cod3r.flyweight.map.model.Pixel;
+import br.com.cod3r.flyweight.map.model.PixelTypeFactory;
+
 import java.util.Random;
 
-import br.com.cod3r.flyweight.map.model.Pixel;
-import br.com.cod3r.flyweight.map.model.PixelFactory;
-
 public class Map {
+
 	private static final Integer TRYS = 10;
 	private static final Integer MAP_ROWS = 10;
 	private static final Integer MAP_COLUMNS = 10;
@@ -25,20 +26,20 @@ public class Map {
 				int pix = sort();
 				Pixel pixel = null;
 				switch (pix) {
-				case 0: 
-					pixel = new Pixel(PixelFactory.getInstance().getPixelType('$', 100), false);
+				case 0:
+					pixel = new Pixel(PixelTypeFactory.getInstance().getPixelType('$', 100), false);
 					break;
-				case 1: 
-					pixel = new Pixel(PixelFactory.getInstance().getPixelType('%', 50), false);
+				case 1:
+					pixel = new Pixel(PixelTypeFactory.getInstance().getPixelType('%', 50), false);
 					break;
-				case 2: 
-					pixel = new Pixel(PixelFactory.getInstance().getPixelType('X', -50), false);
+				case 2:
+					pixel = new Pixel(PixelTypeFactory.getInstance().getPixelType('X', -50), false);
 					break;
-				case 3: 
-					pixel = new Pixel(PixelFactory.getInstance().getPixelType('@', -100), false);
+				case 3:
+					pixel = new Pixel(PixelTypeFactory.getInstance().getPixelType('@', -100), false);
 					break;
 				default:
-					pixel = new Pixel(PixelFactory.getInstance().getPixelType(' ', 0), false);
+					pixel = new Pixel(PixelTypeFactory.getInstance().getPixelType(' ', 0), false);
 					break;
 				}
 				map[row][column] = pixel; 

@@ -2,8 +2,8 @@ package br.com.cod3r.flyweight.map.model;
 
 public class PixelType {
 
-	private Character character;
-	private Integer treasureReward;
+	private final char character;
+	private final int treasureReward;
 
 	public PixelType(Character character, Integer treasureReward) {
 		this.character = character;

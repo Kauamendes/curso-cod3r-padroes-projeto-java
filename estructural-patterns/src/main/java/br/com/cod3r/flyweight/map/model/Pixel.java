@@ -1,6 +1,7 @@
 package br.com.cod3r.flyweight.map.model;
 
 public class Pixel {
+
 	private PixelType type;
 	private boolean oppened;
 	
