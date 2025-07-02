@@ -1,6 +1,7 @@
 package br.com.cod3r.proxy.bank.model;
 
 public class User {
+
 	private String name;
 	private Long accountNumber;
 	private String password;
