@@ -3,6 +3,7 @@ package br.com.cod3r.chain.process.steps;
 import br.com.cod3r.chain.process.service.ProcessContext;
 
 public abstract class ProcessStep {
+
 	protected ProcessStep nextStep;
 	protected Object[] args;
 	

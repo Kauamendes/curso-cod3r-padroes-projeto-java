@@ -8,7 +8,7 @@ public class ProcessContext {
 	private Object processResult;
 	
 	public ProcessContext() {
-		context = new LinkedHashMap<String, Object>();
+		context = new LinkedHashMap<>();
 	}
 
 	@SuppressWarnings("unchecked")
@@ -33,12 +33,12 @@ public class ProcessContext {
 	}
 	
 	public void reset() {
-		context = new LinkedHashMap<String, Object>();
+		context = new LinkedHashMap<>();
 		processResult = null;
 	}
 	
 	public void encapsulate(String key) {
-		Map<String, Object> newContext = new LinkedHashMap<String, Object>();
+		Map<String, Object> newContext = new LinkedHashMap<>();
 		newContext.put(key, context);
 		context = newContext;
 	}
