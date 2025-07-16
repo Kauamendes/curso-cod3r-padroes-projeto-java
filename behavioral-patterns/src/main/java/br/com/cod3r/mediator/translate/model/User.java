@@ -3,11 +3,11 @@ package br.com.cod3r.mediator.translate.model;
 import br.com.cod3r.mediator.translate.mediator.Mediator;
 
 public abstract class User {
-	final protected String name;
-	final protected Language language;
-	final protected Mediator mediator;
-	
-	public User(String name, Mediator mediator, Language language) {
+	protected final String name;
+	protected final Language language;
+	protected final Mediator mediator;
+
+	User(String name, Mediator mediator, Language language) {
 		this.name = name;
 		this.mediator = mediator;
 		this.language = language;
@@ -26,11 +26,11 @@ public abstract class User {
 
 	public void sendMessage(String message, User to) {
 		String receiverName = to != null ? to.getName() : "ALL";
-		System.out.println(String.format("'%s' is sending the message '%s' to '%s'", name, message, receiverName));
+		System.out.printf("'%s' is sending the message '%s' to '%s'%n", name, message, receiverName);
 		mediator.sendMessage(message, to, this);
 	}
 	
 	public void receiveMessage(String message, User from) {
-		System.out.println(String.format("'%s' has recieved the message '%s' from '%s'", name, message, from.getName()));
+		System.out.printf("'%s' has recieved the message '%s' from '%s'%n", name, message, from.getName());
 	}
 }
