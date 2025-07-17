@@ -11,9 +11,9 @@ public class Ghost {
 	}
 
 	public void setState(GhostStates state) {
-		System.out.println(String.format("Changing from %s to %s", 
-				this.state.getClass().getSimpleName(), 
-				state.getClass().getSimpleName()));
+		System.out.printf("Changing from %s to %s%n",
+				this.state.getClass().getSimpleName(),
+				state.getClass().getSimpleName());
 		this.state = state;
 	}
 	
