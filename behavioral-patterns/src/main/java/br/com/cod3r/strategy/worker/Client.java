@@ -4,6 +4,9 @@ import br.com.cod3r.strategy.worker.jobs.Developer;
 import br.com.cod3r.strategy.worker.jobs.HispsterDeveloper;
 import br.com.cod3r.strategy.worker.jobs.Pilot;
 import br.com.cod3r.strategy.worker.jobs.Worker;
+import br.com.cod3r.strategy.worker.strategies.eat.VeggieFoodStrategy;
+import br.com.cod3r.strategy.worker.strategies.transportation.CarStrategy;
+import br.com.cod3r.strategy.worker.strategies.work.DeveloperStrategy;
 
 public class Client {
 
@@ -12,6 +15,14 @@ public class Client {
 		worker.eat();
 		worker.move();
 		worker.work();
+		System.out.println("----------------");
+	}
+
+	public static void presentYourself(Person person) {
+		System.out.println("Hi, I'm " + person.getName());
+		person.eat();
+		person.move();
+		person.work();
 		System.out.println("----------------");
 	}
 	
@@ -24,7 +35,8 @@ public class Client {
 
 		Worker carol = new HispsterDeveloper();
 		presentYourself(carol, "carol");
-		
-		
+
+		Person jhonPerson = new Person("Jhon", new VeggieFoodStrategy(), new CarStrategy(), new DeveloperStrategy());
+		presentYourself(jhonPerson);
 	}
 }
